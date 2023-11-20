@@ -21,6 +21,7 @@ resource "aws_subnet" "public_subnet1" {
   Name = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-public_subnet1-${var.tags["creationTime"]}"
 })
 }
+
 resource "aws_subnet" "public_subnet2" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.public_subnet2_cidr_block
